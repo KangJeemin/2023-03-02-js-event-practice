@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <ul id="menu">
+      <li>itmes-1</li>
+      <li>itmes-2</li>
+      <li>itmes-3</li>
+      <li>itmes-4</li>
+      <li>itmes-5</li>
+    </ul>
+  </div>
+  <script>
+    const menu = document.getElementById('menu');
+    const firstLi = document.querySelector('#menu > li:nth-child(1)');
+    console.dir(menu);
+    console.dir(firstLi);
+
+    let toggle = true;
+    const color = ["pink","black","blue","red","green"]
+    
+    for(let i=0;i<color.length;i++){
+    
+    if(toggle==true){
+      menu.children[2].addEventListener('click',()=>{
+      menu.children[2].style.color="coral";
+      })
+      toggle=false;
+    }
+    else{
+      menu.children[i].addEventListener('click',()=>{
+      menu.children[i].style.color="white";
+      
+      }
+      
+      )
+      toggle=true;
+    }
+    
+    }
+
+
+    
+  </script>
+</body>
+</html>
