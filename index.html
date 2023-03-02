@@ -22,30 +22,24 @@
     console.dir(menu);
     console.dir(firstLi);
 
-    let toggle = true;
-    const color = ["pink","black","blue","red","green"]
-    
-    for(let i=0;i<color.length;i++){
-    
-    if(toggle==true){
-      menu.children[2].addEventListener('click',()=>{
-      menu.children[2].style.color="coral";
-      })
-      toggle=false;
-    }
-    else{
-      menu.children[i].addEventListener('click',()=>{
-      menu.children[i].style.color="white";
-      
+    let swichValue= true;
+
+    menu.addEventListener('click',()=>{
+      if(swichValue==true){
+        for(let i= 0;i<menu.children.length;i++){
+          menu.children[i].style.color = "gray";
+          menu.style.backgroundColor="black";
+        }
+        swichValue=false;
       }
-      
-      )
-      toggle=true;
-    }
-    
-    }
-
-
+      else{
+        for(let i= 0;i<menu.children.length;i++){
+          menu.children[i].style.color = "black";
+          menu.style.backgroundColor="white";
+        }
+      }
+      swichValue=true;
+    })
     
   </script>
 </body>
